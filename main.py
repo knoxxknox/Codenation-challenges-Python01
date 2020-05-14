@@ -26,9 +26,8 @@ MINUTES_IN_AN_HOUR = 60
 DECIMAL_PLACES = 2
 
 def dict_check(source):
-    result = final_result.get(source)
-    return result
-
+    return final_result.get(source)
+     
 def rule_1(source, end, start):
     if start.minute < end.minute:
         total_chamada = ((end.hour - start.hour) * MINUTES_IN_AN_HOUR) + (end.minute - start.minute)
