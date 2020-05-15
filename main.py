@@ -1,7 +1,6 @@
 from datetime import datetime
 from collections import OrderedDict
 
-e_result = {}
 FIXED_VALUE = 0.36
 VALUE_PER_MINUTE = 0.09
 FULL_VALUE = 960 * 0.09
@@ -150,7 +149,14 @@ def charging_rule(source, end, start):
                 rule_4(source)
 
 
-def finale():
+def classify_by_phone_number(records):
+    global e_result
+    e_result = {}
+    for data in records:
+        source = data.get('source')
+        end = datetime.fromtimestamp(data.get('end'))
+        start = datetime.fromtimestamp(data.get('start'))
+        charging_rule(source, end, start)
     dict_aux = {}
     record = []
     ordered_result = OrderedDict(sorted(e_result.items(), key=lambda x: x[1]))
@@ -160,12 +166,3 @@ def finale():
         record.append(dict_aux)
         dict_aux = {}
     return list(reversed(record))
-
-
-def classify_by_phone_number(records):
-    for data in records:
-        source = data.get('source')
-        end = datetime.fromtimestamp(data.get('end'))
-        start = datetime.fromtimestamp(data.get('start'))
-        charging_rule(source, end, start)
-    return finale()

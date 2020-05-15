@@ -3,8 +3,16 @@ platform darwin -- Python 3.7.4, pytest-5.2.1, py-1.8.0, pluggy-0.13.0 -- /opt/a
 cachedir: .pytest_cache
 rootdir: /Users/knox/codenation/python-5
 plugins: arraydiff-0.3, remotedata-0.3.2, doctestplus-0.4.0, openfiles-0.4.0
-collecting ... collected 1 item
+collecting ... collected 8 items
 
-test_main.py::TestChallenge1::test_len PASSED                            [100%]
+test_submit.py::TestChallenge1::test_len PASSED                          [ 12%]
+test_submit.py::TestChallenge1::test_1 PASSED                            [ 25%]
+test_submit.py::TestChallenge1::test_2 PASSED                            [ 37%]
+test_submit.py::TestChallenge1::test_3 PASSED                            [ 50%]
+test_submit.py::TestChallenge1::test_4 PASSED                            [ 62%]
+test_submit.py::TestChallenge1::test_5 PASSED                            [ 75%]
+test_submit.py::TestChallenge1::test_6 PASSED                            [ 87%]
+test_submit.py::TestChallenge1::test_7 PASSED                            [100%]
 
-============================== 1 passed in 0.03s ===============================
+-------- generated xml file: /Users/knox/codenation/python-5/output.xml --------
+============================== 8 passed in 0.10s ===============================
