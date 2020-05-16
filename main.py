@@ -85,12 +85,8 @@ records = [
 ]
 
 
-def dict_check(source):
-    return e_result.get(source)
-
-
 def price_calculation(source, price):
-    currente_value = dict_check(source)
+    currente_value = e_result.get(source)
     if currente_value is not None:
         price = price + currente_value
     partial_result = {}
